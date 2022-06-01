@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body {
+    background-color: #827397;
+}
+header {
+    background-color: #363062;
+    color: #E9D5CA;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.header-title h1 {
+    font-size: 3rem;
+}
+.header-title p {
+    font-style: italic;
+}
+
+header .search {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translate(-50% -50%);
+}
+header .search input[type="text"] {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+@media(max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .header-title {
+        gap: 0.2rem;
+    }
+    header .search {
+        position: relative;
+        left: 0.1rem;
+    }
+}
+@media(max-width: 300px) {
+    header .search input[type="text"] {
+        width: 200px;
+    }
+}
+.container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem auto;
+}
+.container .new-task {
+    display: flex;
+    flex-direction: column;
+    color: #E9D5CA;
+    gap: 0.5rem;
+}
+.new-task input[type="text"] {
+    width: 40%;
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.new-task input[type="button"] {
+    width: 20%;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.new-task input[type="button"]:hover {
+    background-color: #4D4C7D;
+    color: white;
+}
+.tasks {
+    background-color: #4D4C7D;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.tasks .task-list {
+    background-color: #4D4C7D;
+    display: flex;
+    flex-direction: column;
+}
+.tasks .task-list li {
+    background-color: white;
+    border-radius: 5px;
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.tasks .task-list li span {
+    position: absolute;
+    left: 0.5rem;
+}
+.tasks .task-list li button {
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.tasks .task-list li button:hover {
+    opacity: 0.7;
+}
+.tasks .task-list li .done {
+    background-color: greenyellow;
+}
+.tasks .task-list li .delete {
+    background-color: red;
+}
