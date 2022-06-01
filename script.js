@@ -32,14 +32,14 @@ function enterNewTask(e) {
     }
 }
 
-let dlt = document.querySelectorAll('.delete')
+let dlt = document.getElementsByClassName('delete')
 for (var i = 0; i < dlt.length; i++) {
     dlt[i].addEventListener("click", delListItem)
 }
 
-function delListItem(e) {
-    // e.preventDefault()
-    this.parentNode.remove()
+function delListItem() {
+    console.log(this.innerHTML)
+    // this.parentNode.remove()
 }
 
 
