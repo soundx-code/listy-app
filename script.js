@@ -2,12 +2,13 @@ const taskList = document.querySelector('.task-list')
 const addTask = document.getElementById('add-task')
 
 addTask.addEventListener("click", addNewTask)
-function addNewTask() {
+function addNewTask(e) {
     var newTask = document.getElementById('input-task').value
 
     if (newTask === "") {
         alert("Enter new Task")
     } else {
+        e.preventDefault()
         const listContainer = document.querySelector('.tasks')
         listContainer.classList.remove('remove')
 
@@ -32,13 +33,13 @@ function enterNewTask(e) {
     }
 }
 
-let dlt = document.getElementsByClassName('delete')
+const dlt = document.getElementsByClassName('delete')
 for (var i = 0; i < dlt.length; i++) {
     dlt[i].addEventListener("click", delListItem)
 }
 
 function delListItem() {
-    console.log(this.innerHTML)
+    console.log("here")
     // this.parentNode.remove()
 }
 
